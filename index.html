@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Eela Egg Centre | Fresh Eggs Daily</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
+}
+
+:root{
+--primary:#0c8c3c;
+--secondary:#ffc107;
+--dark:#111827;
+--light:#f8fafc;
+--white:#ffffff;
+}
+
+body{
+background:#f5f7fa;
+color:#333;
+overflow-x:hidden;
+}
+
+header{
+position:fixed;
+top:0;
+width:100%;
+background:rgba(255,255,255,0.95);
+backdrop-filter:blur(10px);
+z-index:1000;
+box-shadow:0 2px 15px rgba(0,0,0,.08);
+}
+
+.navbar{
+max-width:1200px;
+margin:auto;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 20px;
+}
+
+.logo{
+display:flex;
+align-items:center;
+gap:10px;
+}
+
+.logo img{
+height:60px;
+}
+
+.logo h2{
+color:var(--primary);
+font-size:22px;
+}
+
+nav ul{
+display:flex;
+list-style:none;
+gap:25px;
+}
+
+nav a{
+text-decoration:none;
+color:#333;
+font-weight:500;
+}
+
+nav a:hover{
+color:var(--primary);
+}
+
+.hero{
+min-height:100vh;
+background:
+linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65)),
+url('https://images.unsplash.com/photo-1518492104633-130d0cc84637?q=80&w=1600');
+background-size:cover;
+background-position:center;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+padding:120px 20px 50px;
+}
+
+.hero-content img{
+width:220px;
+margin-bottom:20px;
+animation:float 3s ease-in-out infinite;
+}
+
+@keyframes float{
+0%,100%{transform:translateY(0);}
+50%{transform:translateY(-10px);}
+}
+
+.hero h1{
+font-size:58px;
+color:white;
+margin-bottom:15px;
+}
+
+.hero p{
+font-size:22px;
+color:#f5f5f5;
+margin-bottom:25px;
+}
+
+.btn{
+display:inline-block;
+padding:14px 28px;
+margin:8px;
+border-radius:50px;
+text-decoration:none;
+font-weight:600;
+transition:.3s;
+}
+
+.btn-primary{
+background:var(--secondary);
+color:black;
+}
+
+.btn-primary:hover{
+transform:translateY(-3px);
+}
+
+.btn-secondary{
+background:var(--primary);
+color:white;
+}
+
+.section{
+padding:90px 20px;
+}
+
+.container{
+max-width:1200px;
+margin:auto;
+}
+
+.section-title{
+text-align:center;
+font-size:40px;
+margin-bottom:15px;
+color:var(--primary);
+}
+
+.section-sub{
+text-align:center;
+margin-bottom:50px;
+color:#666;
+}
+
+.about-box{
+background:white;
+padding:40px;
+border-radius:20px;
+box-shadow:0 10px 30px rgba(0,0,0,.08);
+line-height:1.8;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.card{
+background:white;
+padding:30px;
+border-radius:20px;
+text-align:center;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-8px);
+}
+
+.card h3{
+color:var(--primary);
+margin-bottom:10px;
+}
+
+.why{
+background:linear-gradient(135deg,#0c8c3c,#08682c);
+color:white;
+}
+
+.why .card{
+background:rgba(255,255,255,.1);
+backdrop-filter:blur(5px);
+color:white;
+}
+
+.contact-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:30px;
+}
+
+.contact-card{
+background:white;
+padding:30px;
+border-radius:20px;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+.contact-card h3{
+margin-bottom:15px;
+color:var(--primary);
+}
+
+.contact-card p{
+margin:10px 0;
+}
+
+.map{
+width:100%;
+height:350px;
+border:none;
+border-radius:20px;
+}
+
+footer{
+background:#111827;
+color:white;
+text-align:center;
+padding:30px;
+}
+
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+width:60px;
+height:60px;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:28px;
+text-decoration:none;
+color:white;
+box-shadow:0 5px 20px rgba(0,0,0,.3);
+z-index:999;
+}
+
+.review{
+font-style:italic;
+}
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:36px;
+}
+
+.hero p{
+font-size:18px;
+}
+
+nav{
+display:none;
+}
+
+.logo h2{
+font-size:18px;
+}
+
+.section-title{
+font-size:30px;
+}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="navbar">
+
+<div class="logo">
+<img src="logo.png" alt="Eela Egg Centre">
+<h2>Eela Egg Centre</h2>
+</div>
+
+<nav>
+<ul>
+<li><a href="#home">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#products">Products</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+
+</div>
+</header>
+
+<section class="hero" id="home">
+<div class="hero-content">
+
+<img src="logo.png" alt="Logo">
+
+<h1>Eela Egg Centre</h1>
+
+<p>
+Fresh Eggs Every Day <br>
+தினமும் தரமான புது முட்டைகள்
+</p>
+
+<a href="tel:7639223817" class="btn btn-primary">📞 Call Now</a>
+
+<a href="https://wa.me/917639223817" class="btn btn-secondary">WhatsApp</a>
+
+</div>
+</section>
+
+<section class="section" id="about">
+
+<div class="container">
+
+<h2 class="section-title">About Us</h2>
+
+<p class="section-sub">
+எங்களை பற்றி
+</p>
+
+<div class="about-box">
+
+<p>
+Welcome to Eela Egg Centre, your trusted destination for fresh and quality eggs.
+We supply farm fresh eggs for homes, bakeries, restaurants, hotels and wholesale customers.
+Our commitment is to provide quality products at affordable prices.
+</p>
+
+<br>
+
+<p>
+ஈலா எக் சென்டர் உங்கள் நம்பகமான முட்டை விற்பனை மையமாகும்.
+வீடுகள், பேக்கரிகள், ஹோட்டல்கள் மற்றும் மொத்த விற்பனைக்கான
+தரமான புது முட்டைகள் எங்களிடம் கிடைக்கும்.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="section" id="products">
+
+<div class="container">
+
+<h2 class="section-title">Our Products</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>🥚 Farm Fresh Eggs</h3>
+<p>Daily fresh stock available.</p>
+</div>
+
+<div class="card">
+<h3>🐔 Country Eggs</h3>
+<p>Healthy and nutritious country eggs.</p>
+</div>
+
+<div class="card">
+<h3>🚚 Wholesale Supply</h3>
+<p>Bulk orders for shops and distributors.</p>
+</div>
+
+<div class="card">
+<h3>🏨 Hotel Supply</h3>
+<p>Regular supply for hotels and restaurants.</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="section why">
+
+<div class="container">
+
+<h2 class="section-title" style="color:white;">
+Why Choose Us
+</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>✓ Fresh Stock</h3>
+</div>
+
+<div class="card">
+<h3>✓ Quality Assured</h3>
+</div>
+
+<div class="card">
+<h3>✓ Best Pricing</h3>
+</div>
+
+<div class="card">
+<h3>✓ Fast Service</h3>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<div class="container">
+
+<h2 class="section-title">Customer Reviews</h2>
+
+<div class="cards">
+
+<div class="card review">
+⭐⭐⭐⭐⭐ <br>
+Fresh eggs and excellent service.
+</div>
+
+<div class="card review">
+⭐⭐⭐⭐⭐ <br>
+Best wholesale rates in the area.
+</div>
+
+<div class="card review">
+⭐⭐⭐⭐⭐ <br>
+Trusted quality and daily availability.
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="section" id="contact">
+
+<div class="container">
+
+<h2 class="section-title">Contact Us</h2>
+
+<div class="contact-grid">
+
+<div class="contact-card">
+
+<h3>Contact Details</h3>
+
+<p>📞 7639223817</p>
+<p>📞 7708966523</p>
+<p>📞 6369101311</p>
+
+<p>🕘 Open Daily</p>
+<p>9:00 AM – 9:00 PM</p>
+
+</div>
+
+<div class="contact-card">
+
+<h3>Address</h3>
+
+<p>
+📍 Vinayagar Bakery Near Kovai Kondattam,
+Opposite Kalampalayam,
+Coimbatore
+</p>
+
+</div>
+
+</div>
+
+<br><br>
+
+<iframe class="map"
+src="https://maps.google.com/maps?q=coimbatore&t=&z=13&ie=UTF8&iwloc=&output=embed">
+</iframe>
+
+</div>
+
+</section>
+
+<footer>
+
+<h3>Eela Egg Centre</h3>
+
+<p>
+Fresh Eggs • Quality Service • Customer Satisfaction
+</p>
+
+<br>
+
+<p>
+© 2026 Eela Egg Centre. All Rights Reserved.
+</p>
+
+</footer>
+
+<a href="https://wa.me/917639223817" class="whatsapp">
+💬
+</a>
+
+</body>
+</html>
