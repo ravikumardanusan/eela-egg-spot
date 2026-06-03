@@ -147,6 +147,13 @@ text-align:center;
 color:#d58d00;
 margin-bottom:10px;
 }
+  .card img{
+width:100%;
+height:220px;
+object-fit:cover;
+border-radius:10px;
+margin-bottom:15px;
+}
 
 .contact-box{
 display:grid;
@@ -198,7 +205,6 @@ color:white;
 text-align:center;
 padding:25px;
 }
-
 .whatsapp{
 position:fixed;
 bottom:20px;
@@ -210,6 +216,31 @@ border-radius:50px;
 text-decoration:none;
 font-weight:bold;
 z-index:999;
+}
+.call-btn{
+position:fixed;
+bottom:90px;
+right:20px;
+background:#ffb400;
+color:black;
+padding:15px 20px;
+border-radius:50px;
+text-decoration:none;
+font-weight:bold;
+z-index:999;
+}
+  .slider{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.slider img{
+width:100%;
+height:250px;
+object-fit:cover;
+border-radius:15px;
+box-shadow:0 5px 15px rgba(0,0,0,.2);
 }
 
 @media(max-width:768px){
@@ -241,7 +272,7 @@ font-size:18px;
 
 <div class="nav-links">
 <a href="#home">Home</a>
-<a href="#about">About</a>
+<a href="#gallery">Gallery</a>
 <a href="#products">Products</a>
 <a href="#wholesale">Wholesale</a>
 <a href="#enquiry">Enquiry</a>
@@ -254,7 +285,13 @@ font-size:18px;
 
 <section class="hero" id="home">
 <div class="hero-content">
+
+<p style="color:#ffb400;font-size:18px;font-weight:bold;">
+Welcome To Eela Egg Spot
+</p>
+
 <img src="logo.png">
+
 <h1>Eela Egg Spot</h1>
 <p>Fresh Eggs • Healthy Life</p>
 <p>Wholesale & Retail Egg Supplier</p>
@@ -262,8 +299,30 @@ font-size:18px;
 </div>
 </section>
 
-<section class="section" id="about">
+<section class="section" id="gallery">
 <div class="container">
+
+<h2 class="title">Farm Gallery</h2>
+
+<div class="slider">
+
+<img src="gallery1.jpg">
+<img src="gallery2.jpg">
+<img src="gallery3.jpg">
+<img src="gallery4.jpg">
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ABOUT US START -->
+
+<section class="section" id="about">
+
+<div class="container">
+
 <h2 class="title">About Us</h2>
 
 <div class="cards">
@@ -275,20 +334,62 @@ font-size:18px;
 
 <div class="card">
 <h3>🚚 Fast Delivery</h3>
-<p>Quick and reliable delivery for wholesale and retail customers.</p>
+<p>Reliable delivery for retail and wholesale customers.</p>
 </div>
 
 <div class="card">
 <h3>💯 Hygienic Handling</h3>
-<p>Maintained with strict quality and cleanliness standards.</p>
+<p>Maintained with strict quality standards.</p>
 </div>
 
 <div class="card">
 <h3>🤝 Trusted Service</h3>
-<p>Committed to customer satisfaction and long-term relationships.</p>
+<p>Committed to customer satisfaction.</p>
 </div>
 
 </div>
+
+</div>
+
+</section>
+
+<!-- ABOUT US END -->
+
+<section class="section">
+
+<div class="container">
+
+<h2 class="title">Our Healthy Hens</h2>
+
+</div>
+
+</div>
+</section>
+
+<section class="section">
+
+<div class="container">
+
+<h2 class="title">Our Healthy Hens</h2>
+
+<div class="cards">
+
+<div class="card">
+<img src="white-hen.jpg" width="100%">
+<h3>White Layer Hen</h3>
+<p>Produces high quality white eggs.</p>
+</div>
+
+<div class="card">
+<img src="brown-hen.jpg" width="100%">
+<h3>Brown Layer Hen</h3>
+<p>Produces nutritious brown eggs.</p>
+</div>
+
+</div>
+
+</div>
+
 </section>
 
 <section class="section" id="products">
@@ -299,27 +400,31 @@ font-size:18px;
 <div class="cards">
 
 <div class="card">
+<img src="white-egg.jpg" width="100%">
 <h3>White Eggs</h3>
-<p>Farm Fresh White Eggs</p>
+<p>Fresh farm white eggs rich in protein.</p>
 </div>
 
 <div class="card">
-<h3>Country Eggs</h3>
-<p>Healthy Country Eggs</p>
-</div>
-
-<div class="card">
+<img src="brown-egg.jpg" width="100%">
 <h3>Brown Eggs</h3>
-<p>Premium Brown Eggs</p>
+<p>Premium quality brown eggs for healthy living.</p>
 </div>
 
 <div class="card">
+<img src="country-egg.jpg" width="100%">
+<h3>Country Eggs</h3>
+<p>Natural country eggs with excellent nutrition.</p>
+</div>
+
+<div class="card">
+<img src="egg-tray.jpg" width="100%">
 <h3>Egg Trays</h3>
-<p>Bulk Supply Available</p>
+<p>Wholesale and bulk supply available.</p>
 </div>
 
 </div>
-
+              
 </div>
 </section>
 
@@ -352,6 +457,34 @@ font-size:18px;
 </div>
 
 </section>
+  <section class="section">
+
+<div class="container">
+
+<h2 class="title">Client Testimonials</h2>
+
+<div class="cards">
+
+<div class="card">
+<p>Fresh eggs and excellent service.</p>
+<h3>★★★★★</h3>
+</div>
+
+<div class="card">
+<p>Best egg supplier for wholesale purchases.</p>
+<h3>★★★★★</h3>
+</div>
+
+<div class="card">
+<p>Always on time and quality guaranteed.</p>
+<h3>★★★★★</h3>
+</div>
+
+</div>
+
+</div>
+
+</section>
 
 <section class="section" id="enquiry">
 
@@ -365,7 +498,6 @@ font-size:18px;
 
 <input type="tel" placeholder="Mobile Number" required>
 
-<input type="email" placeholder="Email ID">
 
 <input type="text" placeholder="Address">
 
@@ -389,11 +521,6 @@ Submit Enquiry
 
 </section>
 
-<section class="section" id="contact">
-
-<div class="container">
-
-<h2 class="title">Contact Us</h2></section>
 
 <!-- PASTE LOCATION SECTION HERE -->
 
@@ -434,17 +561,17 @@ Get Directions
 
 <div class="contact-item">
 <h3>Call Us</h3>
-<p>6369101311</p>
+<p><a href="tel:7639223817">7639223817</a></p>
 </div>
 
 <div class="contact-item">
 <h3>Call Us</h3>
-<p>7639223817</p>
+<p><a href="tel:6369101311">6369101311</a></p>
 </div>
 
 <div class="contact-item">
 <h3>Call Us</h3>
-<p>7708966523</p>
+<p><a href="tel:7708966523">7708966523</a></p>
 </div>
 
 </div>
@@ -462,9 +589,14 @@ Get Directions
 </footer>
 
 <a class="whatsapp"
-href="https://wa.me/916369101311"
+href="https://wa.me/917639223817"
 target="_blank">
 WhatsApp
+</a>
+
+<a class="call-btn"
+href="tel:7639223817">
+📞 Call Now
 </a>
 
 </body>
