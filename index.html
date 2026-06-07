@@ -261,6 +261,33 @@ box-shadow:0 5px 15px rgba(0,0,0,.2);
 transform:translateY(-8px);
 transition:.3s;
 }
+  /* TESTIMONIAL SLIDER */
+
+.testimonial-slider{
+overflow:hidden;
+width:100%;
+}
+
+.testimonial-track{
+display:flex;
+gap:25px;
+animation:scrollReviews 25s linear infinite;
+width:max-content;
+}
+
+.testimonial-track .card{
+width:500px;
+flex-shrink:0;
+}
+
+@keyframes scrollReviews{
+0%{
+transform:translateX(0);
+}
+100%{
+transform:translateX(-2200px);
+}
+}
 /* PREMIU  M LOCATION SECTION */
 
 #location{
@@ -470,6 +497,18 @@ Welcome To Eela Egg Spot
 <h3>Brown Layer Hen</h3>
 <p>Produces nutritious brown eggs.</p>
 </div>
+  
+  <div class="card">
+<img src="country-hen.png" width="100%">
+<h3>country Hen</h3>
+<p>Produces high protein eggs.</p>
+</div>
+  
+  <div class="card">
+<img src="quail-hen.png" width="100%">
+<h3>Quail</h3>
+<p>Produces high immunity quail eggs.</p>
+</div>
 
 </div>
 
@@ -546,25 +585,53 @@ Welcome To Eela Egg Spot
 
 <h2 class="title">Client Testimonials</h2>
 
-<div class="cards">
+  <div class="testimonial-slider">
+
+<div class="testimonial-track">
 
 <div class="card">
-<p>"Fresh eggs every day with excellent quality and hygiene. Highly recommended."</p>
+<p>"Fresh eggs every day with excellent quality and hygiene."</p>
 <h3>★★★★★</h3>
 </div>
 
 <div class="card">
-<p>"Best wholesale egg supplier in Coimbatore. Competitive prices and timely delivery."</p>
+<p>"Best wholesale egg supplier in Coimbatore."</p>
 <h3>★★★★★</h3>
 </div>
 
 <div class="card">
-<p>"Reliable service, fresh stock, and friendly customer support. Always satisfied."</p>
+<p>"Reliable service and friendly customer support."</p>
+<h3>★★★★★</h3>
+</div>
+
+<div class="card">
+<p>"Excellent quality eggs at affordable rates."</p>
+<h3>★★★★★</h3>
+</div>
+
+<div class="card">
+<p>"Always delivers on time and maintains quality."</p>
+<h3>★★★★★</h3>
+</div>
+
+<div class="card">
+<p>"Very trustworthy supplier for bulk orders."</p>
+<h3>★★★★★</h3>
+</div>
+
+<div class="card">
+<p>"Neat packaging and fresh eggs every time."</p>
+<h3>★★★★★</h3>
+</div>
+
+<div class="card">
+<p>"Highly satisfied with service and pricing."</p>
 <h3>★★★★★</h3>
 </div>
 
 </div>
 
+</div>
 </div>
 
 </section>
