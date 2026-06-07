@@ -245,18 +245,34 @@ text-decoration:none;
 font-weight:bold;
 z-index:999;
 }
-  .slider{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
+.gallery-slider{
+overflow:hidden;
+width:100%;
 }
 
-.slider img{
-width:100%;
+.gallery-track{
+display:flex;
+gap:20px;
+width:max-content;
+animation:scrollGallery 35s linear infinite;
+}
+
+.gallery-track img{
+width:350px;
 height:250px;
 object-fit:cover;
 border-radius:15px;
 box-shadow:0 5px 15px rgba(0,0,0,.2);
+}
+
+@keyframes scrollGallery{
+0%{
+transform:translateX(0);
+}
+
+100%{
+transform:translateX(-2960px);
+}
 }
 
 .card:hover{
@@ -486,15 +502,31 @@ Welcome To Eela Egg Spot
 
 <h2 class="title">Farm Gallery</h2>
 
-<div class="slider">
+<div class="gallery-slider">
+
+<div class="gallery-track">
 
 <img src="gallery1.jpg">
 <img src="gallery2.jpg">
 <img src="gallery3.jpg">
 <img src="gallery4.jpg">
+<img src="gallery5.jpg">
+<img src="gallery6.jpg">
+<img src="gallery7.jpg">
+<img src="gallery8.jpg">
+
+<img src="gallery1.jpg">
+<img src="gallery2.jpg">
+<img src="gallery3.jpg">
+<img src="gallery4.jpg">
+<img src="gallery5.jpg">
+<img src="gallery6.jpg">
+<img src="gallery7.jpg">
+<img src="gallery8.jpg">
 
 </div>
 
+</div>
 </div>
 
 </section>
