@@ -257,19 +257,26 @@
     }
 
     .testimonial-track {
-      gap: 25px;
-      animation: scrollReviews 25s linear infinite;
-    }
+  display: flex;
+  gap: 25px;
+  width: max-content;
+  animation: scrollReviews 35s linear infinite;
+}
 
-    .testimonial-track .card {
-      width: 500px;
-      flex-shrink: 0;
-    }
+.testimonial-track .card {
+  width: 500px;
+  flex-shrink: 0;
+}
 
-    @keyframes scrollGallery {
-      from { transform: translateX(0); }
-      to { transform: translateX(-2960px); }
-    }
+@keyframes scrollReviews {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-4200px);
+  }
+}
 
     @keyframes scrollReviews {
       from { transform: translateX(0); }
