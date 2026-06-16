@@ -678,12 +678,47 @@
       <h2 class="title">Client Testimonials</h2>
 
       <div class="testimonial-slider">
-        <div class="testimonial-track">
-          <div class="card"><p>"Fresh eggs every day with excellent quality and hygiene."</p><h3>&#9733;&#9733;&#9733;&#9733;&#9733;</h3></div>
-          <div class="card"><p>"Best wholesale egg supplier in Coimbatore."</p><h3>&#9733;&#9733;&#9733;&#9733;&#9733;</h3></div>
-          <div class="card"><p>"Reliable service and friendly customer support."</p><h3>&#9733;&#9733;&#9733;&#9733;&#9733;</h3></div>
-          <div class="card"><p>"Excellent quality eggs at affordable rates."</p><h3>&#9733;&#9733;&#9733;&#9733;&#9733;</h3></div>
-        </div>
+       <div class="testimonial-track">
+  <div class="card">
+    <p>"Fresh eggs every day with excellent quality and hygiene."</p>
+    <h3>&#9733;&#9733;&#9733;&#9733;&#9733;</h3>
+  </div>
+
+  <div class="card">
+    <p>"Best wholesale egg supplier in Coimbatore."</p>
+    <h3>&#9733;&#9733;&#9733;&#9733;&#9733;</h3>
+  </div>
+
+  <div class="card">
+    <p>"Reliable service and friendly customer support."</p>
+    <h3>&#9733;&#9733;&#9733;&#9733;&#9733;</h3>
+  </div>
+
+  <div class="card">
+    <p>"Excellent quality eggs at affordable rates."</p>
+    <h3>&#9733;&#9733;&#9733;&#9733;&#9733;</h3>
+  </div>
+
+  <div class="card">
+    <p>"Always delivers on time and maintains quality."</p>
+    <h3>&#9733;&#9733;&#9733;&#9733;&#9733;</h3>
+  </div>
+
+  <div class="card">
+    <p>"Very trustworthy supplier for bulk orders."</p>
+    <h3>&#9733;&#9733;&#9733;&#9733;&#9733;</h3>
+  </div>
+
+  <div class="card">
+    <p>"Neat packaging and fresh eggs every time."</p>
+    <h3>&#9733;&#9733;&#9733;&#9733;&#9733;</h3>
+  </div>
+
+  <div class="card">
+    <p>"Highly satisfied with service and pricing."</p>
+    <h3>&#9733;&#9733;&#9733;&#9733;&#9733;</h3>
+  </div>
+</div>
       </div>
     </div>
   </section>
@@ -697,13 +732,21 @@
         <input type="tel" name="mobile_number" placeholder="Mobile Number" required />
         <input type="email" name="email" placeholder="Email ID" required />
 
-        <select name="requirement" required>
-          <option value="">Select Requirement</option>
-          <option value="Wholesale">Wholesale</option>
-          <option value="Retail">Retail</option>
-        </select>
+       <select name="requirement" id="requirement" required>
+  <option value="">Select Requirement</option>
+  <option value="Retail">Retail</option>
+  <option value="Wholesale">Wholesale</option>
+</select>
 
-        <input type="number" name="quantity" placeholder="Quantity Required" min="1" />
+<input
+  type="number"
+  name="quantity"
+  id="quantity"
+  placeholder="Quantity Required"
+  min="1"
+  inputmode="numeric"
+  oninput="updateRequirement()"
+/>
         <textarea name="message" rows="5" placeholder="Message"></textarea>
 
         <button type="submit" class="btn">Submit Enquiry</button>
@@ -743,14 +786,34 @@
   <a class="whatsapp" href="https://wa.me/916369249282" target="_blank">WhatsApp</a>
   <a class="call-btn" href="tel:6369249282">&#9742; Call Now</a>
 
-  <script>
-    function openLogoPopup() {
-      document.getElementById("logoPopup").style.display = "flex";
+ <script>
+  function openLogoPopup() {
+    document.getElementById("logoPopup").style.display = "flex";
+  }
+
+  function closeLogoPopup() {
+    document.getElementById("logoPopup").style.display = "none";
+  }
+
+  function updateRequirement() {
+    const quantityInput = document.getElementById("quantity");
+    const requirementSelect = document.getElementById("requirement");
+
+    quantityInput.value = quantityInput.value.replace(/[^0-9]/g, "");
+
+    const quantity = Number(quantityInput.value);
+
+    if (!quantity) {
+      requirementSelect.value = "";
+      return;
     }
 
-    function closeLogoPopup() {
-      document.getElementById("logoPopup").style.display = "none";
+    if (quantity < 900) {
+      requirementSelect.value = "Retail";
+    } else {
+      requirementSelect.value = "Wholesale";
     }
-  </script>
+  }
+</script>
 </body>
 </html>
