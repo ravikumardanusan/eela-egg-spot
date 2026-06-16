@@ -411,12 +411,18 @@
     }
 
     .close-btn {
-      position: absolute;
-      top: 20px;
-      right: 30px;
-      font-size: 50px;
+      position: fixed;
+      top: 22px;
+      right: 22px;
+      width: 58px;
+      height: 58px;
+      border: none;
+      background: #0649b8;
       color: #fff;
+      font-size: 46px;
+      line-height: 1;
       cursor: pointer;
+      z-index: 10000;
     }
 
     footer {
@@ -527,7 +533,7 @@
   </header>
 
   <div id="logoPopup" class="logo-popup">
-    <span class="close-btn" onclick="closeLogoPopup()">&times;</span>
+    <button type="button" class="close-btn" onclick="closeLogoPopup()">&times;</button>
     <img src="logo.png" alt="Eelaa Egg Spot Logo" />
   </div>
 
@@ -711,7 +717,7 @@
     <div class="container">
       <h2 class="title">Customer Enquiry</h2>
 
-      <form class="enquiry-form" action="https://formsubmit.co/ravikumardanusan25@gmail.com" method="POST" onsubmit="return validateEnquiryForm()">
+      <form class="enquiry-form" action="https://formsubmit.co/danusan25@gmail.com" method="POST" onsubmit="return validateEnquiryForm()">
         <input type="text" name="customer_name" id="customerName" placeholder="Customer Name" required />
 
         <input
@@ -790,8 +796,14 @@
     }
 
     function closeLogoPopup() {
-      document.getElementById("logoPopup").style.display ="none";
+      document.getElementById("logoPopup").style.display = "none";
     }
+
+    document.getElementById("logoPopup").addEventListener("click", function(event) {
+      if (event.target.id === "logoPopup") {
+        closeLogoPopup();
+      }
+    });
 
     function allowOnlyTenMobileNumbers() {
       const mobileInput = document.getElementById("mobileNumber");
